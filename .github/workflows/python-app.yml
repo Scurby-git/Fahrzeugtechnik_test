@@ -38,15 +38,15 @@ jobs:
       run: |
         pytest
     - name: Lint with pylint
-        run: |
+      run: |
           pylint --exit-zero my_source.py
-      - name: Test with pytest
-        run: |
+    - name: Test with pytest
+      run: |
           pytest
-      - name: Code coverage
-        run: |
+    - name: Code coverage
+      run: |
           pytest --cov-report term-missing --cov
-      - name: Pydocstyle
-        run: |
+    - name: Pydocstyle
+      run: |
           pydocstyle
 
